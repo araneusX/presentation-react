@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React JS</title>
+    <link rel="icon" href="/assets/react.ico" type="image/x-icon">
+</head>
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.0/showdown.min.js"></script>
+    <!-- <script src="dist/markdown.js"></script> -->
+    <script>
+        fetch('/transcript.md')
+            .then(response => response.text())
+            .then((data) => {
+                const converter = new showdown.Converter(),
+                      wrapper = document.createElement('div');
+                wrapper.style = 'width: 80%; margin: 0 auto;';
+                wrapper.innerHTML = converter.makeHtml(data);
+                document.body.append(wrapper);
+            })
+    </script>
+      <noscript>
+
+</body>
+</html>
