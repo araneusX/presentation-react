@@ -1,7 +1,7 @@
 
 # Slide 1. 
 
-React.
+Hi, everyone, lets talk about one JavaScript library for building user interfaces called React or React.js.
 
 ---
 
